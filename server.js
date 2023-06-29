@@ -8,39 +8,39 @@ app.use(express.static("public"));
 
 const seasons = {
     'season 1': {
-        'season': 'Season 1',
-        'episode': 'Episode 1',
-        'rating': '8.1'
+        'season': 'Season: 1',
+        'episode': 'Episode: 1',
+        'rating': 'Rating: 8.1'
     },
     'season 2': {
-        'season': 'Season 2',
-        'episode': 'Episode 21',
-        'rating': '8.1'
+        'season': 'Season: 2',
+        'episode': 'Episode: 21',
+        'rating': 'Rating: 8.1'
     },
     'season 3': {
-        'season': 'Season 3',
-        'episode': 'Episode 1 & 9',
-        'rating': '7.9'
+        'season': 'Season: 3',
+        'episode': 'Episode: 1 & 9',
+        'rating': 'Rating: 7.9'
     },
     'season 4': {
-        'season': 'Season 4',
-        'episode': 'Episode 26',
-        'rating': '8'
+        'season': 'Season: 4',
+        'episode': 'Episode: 26',
+        'rating': 'Rating: 8'
     },
     'season 5': {
-        'season': 'Season 5',
-        'episode': 'Episode 15 & 23',
-        'rating': '7.9'
+        'season': 'Season: 5',
+        'episode': 'Episode: 15 & 23',
+        'rating': 'Rating: 7.9'
     },
     'season 6': {
-        'season': 'Season 6',
-        'episode': 'Episode 22',
-        'rating': '8.3'
+        'season': 'Season: 6',
+        'episode': 'Episode: 22',
+        'rating': 'Rating: 8.3'
     },
-    'dylan': {
-        'age': 29,
-        'birthName': 'Dylan',
-        'birthLocation': 'Dylan'
+    'Invalid Entry': {
+        'season': '',
+        'episode': '',
+        'rating': ''
     }
 }
 
@@ -53,7 +53,7 @@ app.get('/api/:season', (request, response)=>{
     if(seasons[selectedSeason]){
         response.json(seasons[selectedSeason])
     }else{
-        response.json(seasons['dylan'])
+        response.json(seasons['Invalid Entry'])
     }
 })
 
