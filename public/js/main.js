@@ -8,8 +8,6 @@ async function apiRequest(){
 
         console.log(data)
         document.querySelector('h2').innerText = data.season
-        // document.querySelector('h2').innerText = data.episode
-        // document.querySelector('h2').innerText = data.rating
     }catch(error){
         console.log(error)
     }
